@@ -1,0 +1,10 @@
+version: '1'
+services:
+  nginx:
+    image: nginx:1.19.0-alpine
+    container_name: nginx
+    ports:
+      - "80:80"
+      volumes:
+      - ./nginx/:/etc/nginx/conf.d/
+      - ./www/:/usr/share/nginx/html 
